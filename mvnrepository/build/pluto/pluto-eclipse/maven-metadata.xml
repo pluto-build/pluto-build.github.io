@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>build.pluto</groupId>
+  <artifactId>pluto-eclipse</artifactId>
+  <versioning>
+    <versions>
+      <version>1.0.0-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20150409093133</lastUpdated>
+  </versioning>
+</metadata>

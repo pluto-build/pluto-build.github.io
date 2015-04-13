@@ -4,8 +4,8 @@
   <artifactId>build-latex</artifactId>
   <versioning>
     <versions>
-      <version>1.0.0-SNAPSHOT</version>
+      <version>1.0.1-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20150410053909</lastUpdated>
+    <lastUpdated>20150413120023</lastUpdated>
   </versioning>
 </metadata>

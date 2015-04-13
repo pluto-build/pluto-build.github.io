@@ -1,0 +1,150 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>build.pluto</groupId>
+	<artifactId>maven-config-eclipse</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+  <parent>
+    <groupId>build.pluto</groupId>
+    <artifactId>maven-config-common</artifactId>
+    <version>1.0.1-SNAPSHOT</version>
+    <relativePath>../maven-config-common</relativePath>
+  </parent>
+
+	<properties>
+		<tycho-version>0.22.0</tycho-version>
+		<test-workspace-location>${project.build.directory}/work</test-workspace-location>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<extensions>true</extensions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-compiler-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<compilerArgument>-warn:-discouraged,forbidden,deprication,raw,unchecked,typeHiding,serial,unusedImport</compilerArgument>
+					<compilerArgument>-err:-forbidden</compilerArgument>
+					<source>${java.source.version}</source>
+					<target>${java.binary.version}</target>
+					<debug>true</debug>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-packaging-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<strictBinIncludes>false</strictBinIncludes>
+					<archiveSite>true</archiveSite>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<pomDependencies>consider</pomDependencies>
+					<environments>
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86</arch>
+						</environment>
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86</arch>
+						</environment>
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>macosx</os>
+							<ws>cocoa</ws>
+							<arch>x86_64</arch>
+						</environment>
+					</environments>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-surefire-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<useUIHarness>true</useUIHarness>
+					<useUIThread>true</useUIThread>
+					<argLine>-Xmx512m -Xms256m -Xss16m -XX:MaxPermSize=256m -server
+						${ui.test.vmargs}</argLine>
+					<work>${test-workspace-location}</work>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>eclipse-luna</id>
+			<layout>p2</layout>
+			<url>http://eclipse.mirror.triple-it.nl/releases/luna/</url>
+		</repository>
+		<repository>
+      <id>spoofax-nightly</id>
+      <url>http://download.spoofax.org/update/nightly/</url>
+      <layout>p2</layout>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+	</repositories>
+
+	<profiles>
+		<profile>
+			<id>macosx</id>
+			<activation>
+				<os>
+					<family>mac</family>
+				</os>
+			</activation>
+			<properties>
+				<ui.test.vmargs>-XstartOnFirstThread</ui.test.vmargs>
+			</properties>
+		</profile>
+		<profile>
+			<id>not-macosx</id>
+			<activation>
+				<os>
+					<family>!mac</family>
+				</os>
+			</activation>
+			<properties>
+				<ui.test.vmargs></ui.test.vmargs>
+			</properties>
+		</profile>
+	</profiles>
+
+</project>

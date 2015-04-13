@@ -4,8 +4,8 @@
   <artifactId>maven-config-common</artifactId>
   <versioning>
     <versions>
-      <version>1.0.0-SNAPSHOT</version>
+      <version>1.0.1-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20150413085624</lastUpdated>
+    <lastUpdated>20150413112448</lastUpdated>
   </versioning>
 </metadata>

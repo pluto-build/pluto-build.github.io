@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>com.cedarsoftware</groupId>
+  <artifactId>java-util-pluto-bugfix</artifactId>
+  <version>1.19.4-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20150607.182832</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20150607182832</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>1.19.4-20150607.182832-1</value>
+        <updated>20150607182832</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>1.19.4-20150607.182832-1</value>
+        <updated>20150607182832</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <classifier>sources</classifier>
+        <extension>jar</extension>
+        <value>1.19.4-20150607.182832-1</value>
+        <updated>20150607182832</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <classifier>javadoc</classifier>
+        <extension>jar</extension>
+        <value>1.19.4-20150607.182832-1</value>
+        <updated>20150607182832</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.cedarsoftware</groupId>
+  <artifactId>java-util-pluto-bugfix</artifactId>
+  <versioning>
+    <versions>
+      <version>1.19.4-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20150607182832</lastUpdated>
+  </versioning>
+</metadata>

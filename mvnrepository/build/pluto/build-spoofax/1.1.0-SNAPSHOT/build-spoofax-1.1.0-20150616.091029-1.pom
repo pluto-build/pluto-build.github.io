@@ -1,0 +1,97 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>build.pluto</groupId>
+	<artifactId>build-spoofax</artifactId>
+	<version>1.1.0-SNAPSHOT</version>
+
+	<parent>
+		<groupId>build.pluto</groupId>
+		<artifactId>maven-config-java</artifactId>
+		<version>1.0.1-SNAPSHOT</version>
+		<relativePath></relativePath>
+	</parent>
+
+	<packaging>jar</packaging>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.sugarj</groupId>
+			<artifactId>common</artifactId>
+			<version>1.4.0-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>build.pluto</groupId>
+			<artifactId>pluto</artifactId>
+			<version>1.2.1-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>build.pluto</groupId>
+			<artifactId>build-java</artifactId>
+			<version>1.1.0-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.metaborg</groupId>
+			<artifactId>org.metaborg.spoofax.core</artifactId>
+			<version>1.5.0-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.metaborg</groupId>
+			<artifactId>org.spoofax.terms</artifactId>
+			<version>1.5.0-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.metaborg</groupId>
+			<artifactId>org.spoofax.interpreter.core</artifactId>
+			<version>1.4.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.metaborg</groupId>
+			<artifactId>org.strategoxt.imp.nativebundle</artifactId>
+			<version>1.4.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>3.0</version>
+		</dependency>
+
+		<dependency><!-- SDF3 -->
+			<groupId>org.metaborg</groupId>
+			<artifactId>org.strategoxt.imp.editors.template</artifactId>
+			<version>1.4.0</version>
+		</dependency>
+		<dependency><!-- NaBL -->
+			<groupId>org.metaborg</groupId>
+			<artifactId>org.metaborg.meta.lang.nabl</artifactId>
+			<version>1.4.0</version>
+		</dependency>
+		<dependency><!-- TS -->
+			<groupId>org.metaborg</groupId>
+			<artifactId>org.metaborg.meta.lang.ts</artifactId>
+			<version>1.4.0</version>
+		</dependency>
+
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>pluto-build</id>
+			<url>https://raw.githubusercontent.com/pluto-build/pluto-build.github.io/master/mvnrepository/</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+</project>

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='1'>
+  <unit id='build.pluto.buildjava.eclipse' version='1.1.0.201506181712'>
+    <update id='build.pluto.buildjava.eclipse' range='[0.0.0,1.1.0.201506181712)' severity='0'/>
+    <properties size='4'>
+      <property name='org.eclipse.equinox.p2.name' value='build-java-eclipse'/>
+      <property name='maven-groupId' value='build.pluto'/>
+      <property name='maven-artifactId' value='build.pluto.buildjava.eclipse'/>
+      <property name='maven-version' value='1.1.0-SNAPSHOT'/>
+    </properties>
+    <provides size='4'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='build.pluto.buildjava.eclipse' version='1.1.0.201506181712'/>
+      <provided namespace='osgi.bundle' name='build.pluto.buildjava.eclipse' version='1.1.0.201506181712'/>
+      <provided namespace='java.package' name='build.pluto.buildjava.eclipse' version='0.0.0'/>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+    </provides>
+    <requires size='11'>
+      <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.jdt.core' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.imp.runtime' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.jface.text' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.ui.console' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.sugarj.common' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='build.pluto.pluto' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='build.pluto.build-java' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='build.pluto.pluto-eclipse' range='1.2.1'/>
+    </requires>
+    <artifacts size='1'>
+      <artifact classifier='osgi.bundle' id='build.pluto.buildjava.eclipse' version='1.1.0.201506181712'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='manifest'>
+          Bundle-SymbolicName: build.pluto.buildjava.eclipse;singleton:=true&#xA;Bundle-Version: 1.1.0.201506181712&#xA;
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+</units>

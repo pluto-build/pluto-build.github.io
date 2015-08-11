@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='1'>
+  <unit id='build-spoofax-eclipse' version='1.2.0.201508112151'>
+    <update id='build-spoofax-eclipse' range='[0.0.0,1.2.0.201508112151)' severity='0'/>
+    <properties size='4'>
+      <property name='org.eclipse.equinox.p2.name' value='Spoofax Pluto Builder'/>
+      <property name='maven-groupId' value='build.pluto'/>
+      <property name='maven-artifactId' value='build-spoofax-eclipse'/>
+      <property name='maven-version' value='1.2.0-SNAPSHOT'/>
+    </properties>
+    <provides size='3'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='build-spoofax-eclipse' version='1.2.0.201508112151'/>
+      <provided namespace='osgi.bundle' name='build-spoofax-eclipse' version='1.2.0.201508112151'/>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+    </provides>
+    <requires size='26'>
+      <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.imp.runtime' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.jface.text' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.ui.console' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.spoofax.interpreter.externaldeps' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='build.pluto.build-spoofax' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='build.pluto.pluto' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.strategoxt.imp.metatooling' range='1.4.0'/>
+      <required namespace='osgi.bundle' name='org.metaborg.meta.lang.nabl' range='1.4.0'/>
+      <required namespace='osgi.bundle' name='org.metaborg.meta.lang.ts' range='1.4.0'/>
+      <required namespace='osgi.bundle' name='org.spoofax.interpreter.core' range='1.4.0'/>
+      <required namespace='osgi.bundle' name='org.sugarj.common' range='0.0.0'/>
+      <required namespace='java.package' name='build.pluto' range='0.0.0'/>
+      <required namespace='java.package' name='build.pluto.builder' range='0.0.0'/>
+      <required namespace='java.package' name='build.pluto.buildjava' range='0.0.0'/>
+      <required namespace='java.package' name='build.pluto.dependency' range='0.0.0'/>
+      <required namespace='java.package' name='build.pluto.output' range='0.0.0'/>
+      <required namespace='java.package' name='build.pluto.stamp' range='0.0.0'/>
+      <required namespace='java.package' name='build.pluto.xattr' range='0.0.0'/>
+      <required namespace='java.package' name='org.eclipse.ant.core' range='0.0.0'/>
+      <required namespace='java.package' name='org.strategoxt.imp.runtime' range='0.0.0'/>
+      <required namespace='java.package' name='org.sugarj.common' range='0.0.0'/>
+      <required namespace='java.package' name='org.sugarj.common.path' range='0.0.0'/>
+      <required namespace='java.package' name='org.sugarj.common.util' range='0.0.0'/>
+    </requires>
+    <artifacts size='1'>
+      <artifact classifier='osgi.bundle' id='build-spoofax-eclipse' version='1.2.0.201508112151'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='manifest'>
+          Bundle-SymbolicName: build-spoofax-eclipse;singleton:=true&#xA;Bundle-Version: 1.2.0.201508112151&#xA;
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+</units>

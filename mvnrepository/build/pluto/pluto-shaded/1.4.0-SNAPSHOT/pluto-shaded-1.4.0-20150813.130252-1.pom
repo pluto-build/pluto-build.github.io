@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+    <artifactId>maven-config-java</artifactId>
+    <groupId>build.pluto</groupId>
+    <version>1.0.1-SNAPSHOT</version>
+    <relativePath>pom.xml</relativePath>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>build.pluto</groupId>
+  <artifactId>pluto-shaded</artifactId>
+  <version>1.4.0-SNAPSHOT</version>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>2.4</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <artifactSet>
+            <excludes>
+              <exclude>*:jline</exclude>
+              <exclude>junit:junit</exclude>
+              <exclude>*:hamcrest-core</exclude>
+              <exclude>*:xml-apis</exclude>
+              <exclude>*:guava</exclude>
+            </excludes>
+          </artifactSet>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <repositories>
+    <repository>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots />
+      <id>pluto-build</id>
+      <url>https://raw.githubusercontent.com/pluto-build/pluto-build.github.io/master/mvnrepository/</url>
+    </repository>
+  </repositories>
+</project>
+

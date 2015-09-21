@@ -4,8 +4,8 @@
   <artifactId>pluto-shaded</artifactId>
   <versioning>
     <versions>
-      <version>1.5.1-SNAPSHOT</version>
+      <version>1.5.0-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20150912174958</lastUpdated>
+    <lastUpdated>20150921151018</lastUpdated>
   </versioning>
 </metadata>

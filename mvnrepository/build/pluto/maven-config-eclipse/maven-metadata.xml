@@ -4,8 +4,8 @@
   <artifactId>maven-config-eclipse</artifactId>
   <versioning>
     <versions>
-      <version>1.0.1-SNAPSHOT</version>
+      <version>1.1.0-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20150912174844</lastUpdated>
+    <lastUpdated>20151203151853</lastUpdated>
   </versioning>
 </metadata>

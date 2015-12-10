@@ -1,5 +1,6 @@
 ---
 title: pluto: A sound and optimal incremental build system with dynamic dependencies
+layoyt: default
 ---
 
 Build systems are used in all but the smallest software projects to invoke the

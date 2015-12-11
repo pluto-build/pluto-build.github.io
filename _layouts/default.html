@@ -27,8 +27,9 @@
 <article>
 {{content}}
 </article>
-	      
-	      <aside></aside>
+
+	      {% capture aside-include %}{% include aside.md %}{% endcapture %}
+	      <aside>{{ aside-include | markdownify }}</aside>
 
             </div> <!-- #main -->
         </div> <!-- #main-container -->

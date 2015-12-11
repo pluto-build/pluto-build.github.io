@@ -1,6 +1,6 @@
 ---
-title: pluto: A sound and optimal incremental build system with dynamic dependencies
-layoyt: default
+title: Fast and correct incremental building with pluto
+layout: default
 ---
 
 Build systems are used in all but the smallest software projects to invoke the
@@ -10,7 +10,7 @@ builds, which means that generated artifacts consistently reflect the latest
 source artifacts. Second, a build system must be efficient, which means that it
 incrementally rechecks and rebuilds as few build steps as possible.
 
-##### Example
+### Example
 
 Consider the following build scenario for a Java preprocessor that
 uses ANTLR for parsing the non-preprocessed source code.
@@ -35,7 +35,7 @@ as possible. For example, if the code in the remote repository changes but the
 Java version in the configuration file remains unchanged, the build system
 should only execute steps 1, 2, 4, and 5.
 
-##### Dynamic dependencies needed
+### Dynamic dependencies needed
 
 Almost all existing build systems fail on this example and either provide
 inefficient or incorrect building. The reason is that it is only possible to
@@ -61,7 +61,7 @@ source files. In practice, dynamic dependencies make precise dependency analysis
 a lot easier and yield less overapproximation (superfluous dependencies) and
 less underapproximation (missing dependencies).
 
-##### The pluto build system
+### The pluto build system
 
 We have developed a new build system called *pluto* that supports dynamic build
 dependencies. In pluto, each build step consists of a build function that can
@@ -86,3 +86,6 @@ values. Parameterized build steps can often be reused across build
 scripts. Fourth, the type system of Java provides a statically typed interface
 to build steps and ensures that build steps are invoked on well-typed arguments
 only.
+
+
+### Team

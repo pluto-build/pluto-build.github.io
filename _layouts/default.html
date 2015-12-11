@@ -28,10 +28,7 @@
 {{content}}
 </article>
 	      
-	      <aside>
-                    <h3>Getting started with pluto</h3>
-                    <p>We are working on bootstrapping and a binary release of pluto. In the meantime, you can find the source code of pluto and a large number of builders on <a href="https://github.com/pluto-build/">github</a>.</p>
-                </aside>
+	      <aside>{% capture aside-include %}{% include aside.md %}{% endcapture %}{{ aside-include | markdownify }}</aside>
 
             </div> <!-- #main -->
         </div> <!-- #main-container -->

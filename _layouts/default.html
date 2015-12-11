@@ -28,7 +28,8 @@
 {{content}}
 </article>
 
-	      <aside>{% include aside.md %}</aside>
+	      {% capture aside-include %}{% include aside.md %}{% endcapture %}
+	      <aside>{{ aside-include }}</aside>
 
             </div> <!-- #main -->
         </div> <!-- #main-container -->

@@ -1,0 +1,58 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>build.pluto</groupId>
+	<artifactId>maven-config-java-bundle</artifactId>
+	<version>1.1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<parent>
+		<groupId>build.pluto</groupId>
+		<artifactId>maven-config-java</artifactId>
+		<version>1.1.0-SNAPSHOT</version>
+		<relativePath>../maven-config-java</relativePath>
+	</parent>
+  
+	<build>
+		<plugins>
+      <!--  copied from https://github.com/metaborg/mb-rep/blob/master/org.spoofax.terms/pom.xml -->
+			<!-- Generate MANIFEST.MF from project, to make project available to Eclipse plugins. -->
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<version>2.5.3</version>
+				<configuration>
+				  <manifestLocation>${manifest-location}</manifestLocation>
+          <instructions>
+            <!-- Fix names not to include the groupId. -->
+            <Bundle-SymbolicName>${project.groupId}.${project.artifactId}</Bundle-SymbolicName>
+            <Bundle-Name>${project.artifactId}</Bundle-Name>
+            <!-- Replace SNAPSHOT in the manifest version with given qualifier. -->
+            <Bundle-Version>$(replace;${project.version};-SNAPSHOT;.${forceContextQualifier})</Bundle-Version>
+            <!-- Embed dependencies into plugin bundle, so they are exportable. -->
+            <Embed-Dependency></Embed-Dependency>
+            <Import-Package>!.</Import-Package>
+            <Private-Package></Private-Package>
+            <!-- Don't generate uses declarations in exported packages. -->
+            <_nouses>true</_nouses>
+            <!-- Allow buddy class loading, so that other bundles can merge their 
+              classpath with this bundle, which some libraries require. -->
+            <Eclipse-BuddyPolicy>registered</Eclipse-BuddyPolicy>
+          </instructions>
+				</configuration>
+				<!-- Hook in manifest generation into the process-classes phase, because 
+					this is not automatically done for projects with 'jar' packaging. -->
+				<executions>
+					<execution>
+						<id>bundle-manifest</id>
+						<phase>process-classes</phase>
+						<goals>
+							<goal>manifest</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

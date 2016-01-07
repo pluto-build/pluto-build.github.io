@@ -66,6 +66,9 @@
 						</Import-Package>
 						<!-- Don't generate uses declarations in exported packages. -->
 						<_nouses>true</_nouses>
+            <!-- Allow buddy class loading, so that other bundles can merge their classpath with this bundle, which 
+              some libraries require. -->
+            <Eclipse-BuddyPolicy>registered</Eclipse-BuddyPolicy>
 					</instructions>
 				</configuration>
 				<!-- Hook in manifest generation into the process-classes phase, because 

@@ -4,8 +4,8 @@
   <artifactId>pluto</artifactId>
   <versioning>
     <versions>
-      <version>1.9.0-SNAPSHOT</version>
+      <version>1.9.1-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20160601142909</lastUpdated>
+    <lastUpdated>20160601143301</lastUpdated>
   </versioning>
 </metadata>

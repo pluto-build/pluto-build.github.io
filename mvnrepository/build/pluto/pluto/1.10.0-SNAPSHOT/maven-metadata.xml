@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>build.pluto</groupId>
+  <artifactId>pluto</artifactId>
+  <version>1.10.0-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20160719.150107</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20160719150107</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>1.10.0-20160719.150107-1</value>
+        <updated>20160719150107</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>1.10.0-20160719.150107-1</value>
+        <updated>20160719150107</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <classifier>tests</classifier>
+        <extension>jar</extension>
+        <value>1.10.0-20160719.150107-1</value>
+        <updated>20160719150107</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>

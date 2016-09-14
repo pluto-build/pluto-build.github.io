@@ -3,10 +3,9 @@
   <groupId>build.pluto</groupId>
   <artifactId>pluto</artifactId>
   <versioning>
-    <release>1.10.0</release>
     <versions>
-      <version>1.10.0</version>
+      <version>1.11.0-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20160914124332</lastUpdated>
+    <lastUpdated>20160914135826</lastUpdated>
   </versioning>
 </metadata>

@@ -92,7 +92,7 @@
       <id>sugar-lang</id>
       <url>http://sugar-lang.github.io/mvnrepository/</url>
       <releases>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
       </releases>
       <snapshots>
         <enabled>true</enabled>

@@ -3,10 +3,9 @@
   <groupId>build.pluto</groupId>
   <artifactId>build-java</artifactId>
   <versioning>
-    <release>1.5.1</release>
     <versions>
-      <version>1.5.1</version>
+      <version>1.6.0-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20160601144322</lastUpdated>
+    <lastUpdated>20160914111215</lastUpdated>
   </versioning>
 </metadata>

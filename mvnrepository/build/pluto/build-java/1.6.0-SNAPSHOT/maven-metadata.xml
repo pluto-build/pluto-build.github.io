@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>build.pluto</groupId>
+  <artifactId>build-java</artifactId>
+  <version>1.6.0-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20160914.111215</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20160914111215</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>1.6.0-20160914.111215-1</value>
+        <updated>20160914111215</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>1.6.0-20160914.111215-1</value>
+        <updated>20160914111215</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>
